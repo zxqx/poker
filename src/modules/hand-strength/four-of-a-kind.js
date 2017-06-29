@@ -3,8 +3,6 @@ import groupBy from 'lodash.groupby';
 export function isFourOfAKind(hand) {
   const groups = groupBy(hand, 'value');
 
-  return Object.keys(groups).some(key => {
-    const group = groups[key];
-    return group.length === 4;
-  });
+  return Object.keys(groups)
+    .some(key => groups[key].length === 4);
 }
