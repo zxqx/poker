@@ -1,20 +1,26 @@
+import { isLooselyFlush } from './flush.js';
+
 export function isStraight(hand) {
-  const sortedHand = hand
-    .map(card => card.value)
-    .sort((a, b) => a - b);
+  const sortedHand = hand.sort((a, b) => a.value - b.value);
+
+  return isLooselyStraight(sortedHand) && !isLooselyFlush(sortedHand);
+}
+
+export function isLooselyStraight(hand) {
+  const sortedHand = hand.sort((a, b) => a.value - b.value);
 
   return isSequential(sortedHand) || isWheel(sortedHand);
 }
 
-function isWheel(hand) {
-  const handWithoutAces = hand.filter(value => value !== 14);
+function isWheel(sortedHand) {
+  const handWithoutAces = sortedHand.filter(card => card.value !== 14);
 
   return handWithoutAces.length === 4 &&
-    handWithoutAces[0] === 2 &&
+    handWithoutAces[0].value === 2 &&
     isSequential(handWithoutAces);
 }
 
-function isSequential(arr) {
-  return arr.every((value, index) =>
-    value + 1 === arr[index + 1] || index === arr.length - 1);
+function isSequential(sortedHand) {
+  return sortedHand.every((card, index, arr) =>
+    index === arr.length - 1 || card.value + 1 === arr[index + 1].value);
 }
