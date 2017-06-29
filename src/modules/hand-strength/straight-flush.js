@@ -1,8 +1,11 @@
-import isFlush from './flush';
-import isStraight from './straight';
-import groupBy from 'lodash.groupBy';
+import { isFlush } from './flush';
+import { isStraight } from './straight';
+import  groupBy from 'lodash.groupBy';
 
-export default function isStraightFlush (hand) {
-  Object.Keys
+export function isStraightFlush (hand) {
+   const flush = isFlush(hand);
+   const straight = isStraight(hand);
+
+   return flush && straight;
 }
 
