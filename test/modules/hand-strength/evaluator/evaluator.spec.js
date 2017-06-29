@@ -1,4 +1,4 @@
-import { determineHandRanking } from '../../../../src/modules/hand-strength/evaluator.js';
+import { determineHandRanking, determineWinningHands } from '../../../../src/modules/hand-strength/evaluator.js';
 import {
   highCards,
   pairs,
@@ -9,7 +9,8 @@ import {
   fullHouses,
   fourOfAKinds,
   straightFlushes,
-} from './evaluator.hands.js';
+} from './rankings.hands.js';
+import { straightWinner } from './winning.hands.js';
 
 describe('evaluator', () => {
   it('should determine hands are high cards', () => {
@@ -64,5 +65,9 @@ describe('evaluator', () => {
     straightFlushes.forEach(hand => {
       expect(determineHandRanking(hand).id).toBe('straight-flush');
     });
+  });
+
+  it('should determine straight is winning hand', () => {
+    expect(determineWinningHands(straightWinner).id).toBe('straight');
   });
 });

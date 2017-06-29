@@ -68,3 +68,9 @@ export const handRankings = [
 export function determineHandRanking(hand) {
   return handRankings.find(ranking => ranking.evaluator(hand));
 }
+
+export function determineWinningHands(hands) {
+  return hands
+    .map(hand => determineHandRanking(hand))
+    .sort((a, b) => b.strength - a.strength)[0];
+}
