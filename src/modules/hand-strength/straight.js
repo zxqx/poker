@@ -16,5 +16,5 @@ function isWheel(hand) {
 
 function isSequential(arr) {
   return arr.every((value, index) =>
-    arr[index + 1] ? value + 1 === arr[index + 1] : true);
+    value + 1 === arr[index + 1] || index === arr.length - 1);
 }
