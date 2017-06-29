@@ -1,4 +1,4 @@
-import { isPair } from '../../../src/modules/hand-strength/pair';
+import { isPair } from '../../../../src/modules/hand-strength/pair';
 import { pairs, nonPairs } from './pair.hands.js';
 
 describe('pair', () => {
