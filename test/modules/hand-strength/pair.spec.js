@@ -1,5 +1,5 @@
-import { isPair } from '../../../../src/modules/hand-strength/pair';
-import { pairs, nonPairs } from './straight.hands.js';
+import { isPair } from '../../../src/modules/hand-strength/pair';
+import { pairs, nonPairs } from './pair.hands.js';
 
 describe('pair', () => {
   it('should determine hand contains a pair', () => {
