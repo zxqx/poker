@@ -19,3 +19,27 @@ export function isThreeOfAKind(hand) {
     kickers
   };
 }
+
+export function hasThreeOfAKind(hand) {
+  const groups = groupBy(hand, 'value');
+  const keys = Object.keys(groups);
+
+  const criteria = keys.some(key => groups[key].length === 3);
+
+  const value = keys
+    .filter(key => groups[key].length === 3)
+    .map(value => parseInt(value))
+    .sort((a,b) => b-a)
+
+  console.log(value)
+
+  const kickers = keys
+    .filter(key => groups[key].length !== 3)
+    .map(kicker => parseInt(kicker))
+    .sort((a,b) => b-a)
+
+  return criteria && {
+    values: value,
+    kickers
+  };
+}
