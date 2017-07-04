@@ -10,7 +10,7 @@ import {
   fourOfAKinds,
   straightFlushes,
 } from './rankings.hands.js';
-import { straightWinner } from './winning.hands.js';
+import { straightVsThreeOfAKind } from './winning.hands.js';
 
 describe('evaluator', () => {
   it('should determine hands are high cards', () => {
@@ -68,6 +68,6 @@ describe('evaluator', () => {
   });
 
   it('should determine straight is winning hand', () => {
-    expect(determineWinningHands(straightWinner).id).toBe('straight');
+    expect(determineWinningHands(straightVsThreeOfAKind).id).toBe('straight');
   });
 });

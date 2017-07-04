@@ -4,7 +4,7 @@ import { flush , nonFlush  } from './flush.hands.js';
 describe('flush', () => {
   it('should determine hand contains a flush', () => {
     flush.forEach(hand => {
-      expect(isFlush(hand)).toBe(true);
+      expect(isFlush(hand)).toBeTruthy();
     });
   });
 

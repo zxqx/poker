@@ -1,4 +1,4 @@
-export const straightWinner = [
+export const straightVsThreeOfAKind = [
   [
     {
       value: 8,

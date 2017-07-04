@@ -4,7 +4,7 @@ import { fourOfAKinds, nonFourOfAKinds } from './four-of-a-kind.hands.js';
 describe('four of a kind', () => {
   it('should determine hand is four of a kind', () => {
     fourOfAKinds.forEach(hand => {
-      expect(isFourOfAKind(hand)).toBe(true);
+      expect(isFourOfAKind(hand)).toBeTruthy();
     });
   });
 

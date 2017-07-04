@@ -4,7 +4,7 @@ import { twoPairs, nonTwoPairs } from './two-pair.hands.js';
 describe('two pair', () => {
   it('should determine hand is a two pair', () => {
     twoPairs.forEach(hand => {
-      expect(isTwoPair(hand)).toBe(true);
+      expect(isTwoPair(hand)).toBeTruthy();
     });
   });
 

@@ -4,7 +4,7 @@ import { fullHouses, nonFullHouses } from './full-house.hands.js';
 describe('full house', () => {
   it('should determine hand is full house', () => {
     fullHouses.forEach(hand => {
-      expect(isFullHouse(hand)).toBe(true);
+      expect(isFullHouse(hand)).toBeTruthy();
     });
   });
 

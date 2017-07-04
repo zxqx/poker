@@ -2,8 +2,11 @@ import { isLooselyFlush } from './flush.js';
 
 export function isStraight(hand) {
   const sortedHand = hand.sort((a, b) => a.value - b.value);
+  const criteria = isLooselyStraight(sortedHand) && !isLooselyFlush(sortedHand);
 
-  return isLooselyStraight(sortedHand) && !isLooselyFlush(sortedHand);
+  return criteria && {
+    values: isWheel(sortedHand) ? [5] : [sortedHand[4].value]
+  };
 }
 
 export function isLooselyStraight(hand) {

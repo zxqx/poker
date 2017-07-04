@@ -4,7 +4,7 @@ import { highCard, nonHighCard } from './high-card.hands.js';
 describe('high card', () => {
   it('should determine hand ranking is high card', () => {
     highCard.forEach(hand => {
-      expect(isHighCard(hand)).toBe(true);
+      expect(isHighCard(hand)).toBeTruthy();
     });
   });
 

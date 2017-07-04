@@ -4,7 +4,7 @@ import { straightFlushes, nonStraightFlushes } from './straight-flush.hands.js';
 describe('straight flush', () => {
   it('should determine hand is straight flush', () => {
     straightFlushes.forEach(hand => {
-      expect(isStraightFlush(hand)).toBe(true);
+      expect(isStraightFlush(hand)).toBeTruthy();
     });
   });
 
