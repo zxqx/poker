@@ -12,7 +12,6 @@ describe('four of a kind', () => {
       values: [10],
       kickers: [13]
     });
-
     expect(isFourOfAKind(fourOfAKind2)).toEqual({
       values: [5],
       kickers: [4]
