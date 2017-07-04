@@ -16,7 +16,6 @@ describe('three of a kind', () => {
       kickers: [7]
     });
   });
-
   it('should determine hand is not three of a kind', () => {
     expect(hasThreeOfAKind(nonThreeOfAKind1)).toBe(false);
   });
