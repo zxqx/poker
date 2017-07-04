@@ -2,15 +2,18 @@ import groupBy from 'lodash.groupby';
 
 export function isFullHouse(hand) {
   const groups = groupBy(hand, 'value');
+  const keys = Object.keys(groups);
 
-  const criteria = Object.keys(groups).every(key => {
+  const criteria = keys.every(key => {
     const group = groups[key];
     return group.length === 2 || group.length === 3;
   });
 
-  const values = Object.keys(groups);
+  const values = keys
+    .sort((a, b) => groups[b].length - groups[a].length)
+    .map(key => parseInt(key));
 
   return criteria && {
-    values: 'values'
+    values
   };
 }
