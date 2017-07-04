@@ -1,5 +1,5 @@
 
-//values: [5] kickers: [13,12,6]
+//values: [5] kickers: [13,12,6,4,2]
 export const pairs1  = 
 [
   {
@@ -40,7 +40,7 @@ export const pairs1  =
 ];
   
 
-//values: [8] kickers: [13,12,11]
+//values: [8] kickers: [13, 12, 11, 6, 3]
 
 export const pairs2 = [
   {
@@ -76,6 +76,94 @@ export const pairs2 = [
   {
     value: 12,
     faceValue: 'Q',
+    suit: 'diamonds'
+  },
+  {
+    value: 3,
+    faceValue: '3',
+    suit: 'spades'
+  }
+];
+
+//value: [8,6] kickers: [13,12,11,3]
+export const pairs3 = [
+  {
+    value: 8,
+    faceValue: '8',
+    suit: 'clubs'
+  },
+  {
+    value: 6,
+    faceValue: '6',
+    suit: 'clubs'
+  },
+  {
+    value: 8,
+    faceValue: '8',
+    suit: 'hearts'
+  },
+  {
+    value: 6,
+    faceValue: '6',
+    suit: 'diamonds'
+  },
+  {
+    value: 11,
+    faceValue: 'J',
+    suit: 'spades'
+  },
+  {
+    value: 13,
+    faceValue: 'K',
+    suit: 'diamonds'
+  },
+  {
+    value: 12,
+    faceValue: 'Q',
+    suit: 'diamonds'
+  },
+  {
+    value: 3,
+    faceValue: '3',
+    suit: 'spades'
+  }
+];
+
+//value: [8,6,11] kickers: [13,3]
+export const pairs4 = [
+  {
+    value: 8,
+    faceValue: '8',
+    suit: 'clubs'
+  },
+  {
+    value: 6,
+    faceValue: '6',
+    suit: 'clubs'
+  },
+  {
+    value: 8,
+    faceValue: '8',
+    suit: 'hearts'
+  },
+  {
+    value: 6,
+    faceValue: '9',
+    suit: 'diamonds'
+  },
+  {
+    value: 11,
+    faceValue: 'J',
+    suit: 'spades'
+  },
+  {
+    value: 13,
+    faceValue: 'K',
+    suit: 'diamonds'
+  },
+  {
+    value: 11,
+    faceValue: 'J',
     suit: 'diamonds'
   },
   {
