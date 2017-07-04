@@ -14,11 +14,23 @@ describe('straight flush', () => {
     expect(isStraightFlush(straightFlush1)).toEqual({
       values: [6]
     });
+
+    expect(isStraightFlush(straightFlush2)).toEqual({
+      values: [9]
+    });
+
+    expect(isStraightFlush(straightFlush3)).toEqual({
+      values: [11]
+    });
+
+    expect(isStraightFlush(straightFlush4)).toEqual({
+      values: [14]
+    });
   });
 
-  //it('should determine hand is not straight flush', () => {
-    //nonStraightFlushes.forEach(hand => {
-      //expect(isStraightFlush(hand)).toBe(false);
-    //});
-  //});
+  it('should determine hand is not straight flush', () => {
+    expect(isStraightFlush(nonStraightFlush1)).toBe(false);
+    expect(isStraightFlush(nonStraightFlush2)).toBe(false);
+    expect(isStraightFlush(nonStraightFlush3)).toBe(false);
+  });
 });
