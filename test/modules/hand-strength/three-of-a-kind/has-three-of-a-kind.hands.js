@@ -70,13 +70,13 @@ export const threeOfAKind2 = [
     suit: 'clubs'
   },
   {
-    value: 7
-    faceValue: '7'
+    value: 7,
+    faceValue: '7',
     suit:'diamonds'
   }
 ];
 
-export const nonThreeOfAKind1 = [
+export const nonThreeOfAKind2 = [
   {
     value: 13,
     faceValue: 'K',
