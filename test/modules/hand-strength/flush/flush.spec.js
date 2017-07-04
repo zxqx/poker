@@ -28,4 +28,3 @@ describe('flush', () => {
     expect(isFlush(nonFlush4)).toBe(false);
   });
 });
-

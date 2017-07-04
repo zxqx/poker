@@ -13,19 +13,16 @@ export function isPair(hand) {
     .filter(key => parseInt(key) !== value)
     .map(kicker => parseInt(kicker))
     .sort((a,b) => b-a);
- 
+
  return criteria && {
   values: [value],
   kickers
  };
 }
 
-
-
 export function hasPair(hand) {
   const groups = groupBy(hand, 'value');
-  const keys = Object.keys(groups); 
-
+  const keys = Object.keys(groups);
   const criteria = keys.some(key => groups[key].length === 2);
 
   const value = keys
@@ -37,12 +34,9 @@ export function hasPair(hand) {
     .filter(key => groups[key].length !== 2)
     .map(kicker => parseInt(kicker))
     .sort((a,b) => b-a)
- 
+
   return criteria && {
     values: value,
     kickers
   };
 }
-
-
-

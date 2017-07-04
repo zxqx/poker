@@ -10,46 +10,10 @@ import { isStraightFlush } from './straight-flush.js';
 
 export const handRankings = [
   {
-    id: 'high-card',
-    name: 'High Card',
-    strength: 0,
-    evaluator: isHighCard
-  },
-  {
-    id: 'pair',
-    name: 'Pair',
-    strength: 1,
-    evaluator: isPair
-  },
-  {
-    id: 'two-pair',
-    name: 'Two Pair',
-    strength: 2,
-    evaluator: isTwoPair
-  },
-  {
-    id: 'three-of-a-kind',
-    name: 'Three of a Kind',
-    strength: 3,
-    evaluator: isThreeOfAKind
-  },
-  {
-    id: 'straight',
-    name: 'Straight',
-    strength: 4,
-    evaluator: isStraight
-  },
-  {
-    id: 'flush',
-    name: 'Flush',
-    strength: 5,
-    evaluator: isFlush
-  },
-  {
-    id: 'full-house',
-    name: 'Full House',
-    strength: 6,
-    evaluator: isFullHouse
+    id: 'straight-flush',
+    name: 'Straight Flush',
+    strength: 8,
+    evaluator: isStraightFlush
   },
   {
     id: 'four-of-a-kind',
@@ -58,10 +22,46 @@ export const handRankings = [
     evaluator: isFourOfAKind
   },
   {
-    id: 'straight-flush',
-    name: 'Straight Flush',
-    strength: 8,
-    evaluator: isStraightFlush
+    id: 'full-house',
+    name: 'Full House',
+    strength: 6,
+    evaluator: isFullHouse
+  },
+  {
+    id: 'flush',
+    name: 'Flush',
+    strength: 5,
+    evaluator: isFlush
+  },
+  {
+    id: 'straight',
+    name: 'Straight',
+    strength: 4,
+    evaluator: isStraight
+  },
+  {
+    id: 'three-of-a-kind',
+    name: 'Three of a Kind',
+    strength: 3,
+    evaluator: isThreeOfAKind
+  },
+  {
+    id: 'two-pair',
+    name: 'Two Pair',
+    strength: 2,
+    evaluator: isTwoPair
+  },
+  {
+    id: 'pair',
+    name: 'Pair',
+    strength: 1,
+    evaluator: isPair
+  },
+  {
+    id: 'high-card',
+    name: 'High Card',
+    strength: 0,
+    evaluator: isHighCard
   }
 ];
 
