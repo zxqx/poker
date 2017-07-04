@@ -10,7 +10,11 @@ import {
   fourOfAKinds,
   straightFlushes,
 } from './rankings.hands.js';
-import { straightVsThreeOfAKind } from './winning.hands.js';
+import {
+  straightVsThreeOfAKind,
+  fullHouseVsFlush,
+  sixHanded
+} from './winning.hands.js';
 
 describe('evaluator', () => {
   it('should determine hands are high cards', () => {
@@ -69,5 +73,13 @@ describe('evaluator', () => {
 
   it('should determine straight is winning hand', () => {
     expect(determineWinningHands(straightVsThreeOfAKind).id).toBe('straight');
+  });
+
+  it('should determine full house is winning hand', () => {
+    expect(determineWinningHands(fullHouseVsFlush).id).toBe('full-house');
+  });
+
+  it('should determine best of 6 hands', () => {
+    expect(determineWinningHands(sixHanded).id).toBe('four-of-a-kind');
   });
 });
