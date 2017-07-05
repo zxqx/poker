@@ -3,12 +3,11 @@ import {
   createHand
 } from '../actions/hand';
 
-
 const initialState = {
   actions: [],
   availableActions: []
 };
 
 export default handleActions({
-  [createHand]: (state, action) => initialState
+  [createHand]: () => initialState
 }, initialState);
