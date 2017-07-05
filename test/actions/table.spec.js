@@ -1,6 +1,7 @@
 import { spy } from 'sinon';
 import {
   createTable,
+  modifyTable,
   addPlayer,
   modifyPlayerStackSize,
   removePlayer,
@@ -21,6 +22,17 @@ describe('Table actions', () => {
 
     expect(createTable(payload)).toEqual({
       type: createTable.toString(),
+      payload
+    });
+  });
+
+  it('should create modify table action', () => {
+    const payload = {
+      maxBuyIn: 50
+    };
+
+    expect(modifyTable(payload)).toEqual({
+      type: modifyTable.toString(),
       payload
     });
   });

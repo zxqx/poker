@@ -2,6 +2,7 @@ import { handleActions } from 'redux-actions';
 import pickBy from 'lodash.pickby';
 import {
   createTable,
+  modifyTable,
   addPlayer,
   modifyPlayerStackSize,
   removePlayer,
@@ -16,6 +17,10 @@ const initialState = {
 
 export default handleActions({
   [createTable]: (state, action) => ({
+    ...state,
+    ...action.payload
+  }),
+  [modifyTable]: (state, action) => ({
     ...state,
     ...action.payload
   }),

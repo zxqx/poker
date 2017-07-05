@@ -1,6 +1,7 @@
 import table from '../../src/reducers/table';
 import {
   createTable,
+  modifyTable,
   addPlayer,
   modifyPlayerStackSize,
   removePlayer,
@@ -31,6 +32,30 @@ describe('Table reducers', () => {
       bigBlind: 0.5,
       maxPlayers: 6,
       maxBuyIn: 50,
+      players: {}
+    });
+  });
+
+  it('should handle modify table', () => {
+    const config = {
+      maxBuyIn: 100
+    };
+
+    expect(table({
+      smallBlind: 0.25,
+      bigBlind: 0.5,
+      maxPlayers: 6,
+      maxBuyIn: 50,
+      players: {}
+    },
+    {
+      type: modifyTable,
+      payload: config
+    })).toEqual({
+      smallBlind: 0.25,
+      bigBlind: 0.5,
+      maxPlayers: 6,
+      maxBuyIn: 100,
       players: {}
     });
   });
