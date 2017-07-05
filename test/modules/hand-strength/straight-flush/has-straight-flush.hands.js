@@ -1,4 +1,3 @@
-
 export const straightFlush1 = [
   {
     value: 13,

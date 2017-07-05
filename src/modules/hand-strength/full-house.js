@@ -50,8 +50,6 @@ export function hasFullHouse(hand) {
     .sort((a, b) => groups[b].length - groups[a].length)
     .map(key => parseInt(key))
 
-  console.log(values)
-
   return criteria && {
     values: values
   };

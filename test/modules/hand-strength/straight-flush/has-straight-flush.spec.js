@@ -8,7 +8,7 @@ import {
 describe('straight flush', () => {
   it('should determine hand is straight flush', () => {
     expect(hasStraightFlush(straightFlush1)).toEqual({
-      values: [10]
+      values: [11]
     });
   });
 

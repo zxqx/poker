@@ -14,10 +14,12 @@ export function isStraightFlush(hand) {
 }
 
 export function hasStraightFlush(hand) {
-  const criteria = hasStraight(hand) && hasFlush(hand);
-  const highCard = hand.sort((a, b) => a.value - b.value)[4];
+  const straight = hasStraight(hand);
+  const flush = hasFlush(hand);
+
+  const criteria = straight && flush;
 
   return criteria && {
-    values: [highCard.value]
+    values: straight.values
   };
 }

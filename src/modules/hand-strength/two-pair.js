@@ -34,8 +34,6 @@ export function hasTwoPair(hand) {
 
   const criteria = value.length == 2;
 
-  console.log(criteria, value)
-
   return criteria &&  {
     values: value,
     kickers
