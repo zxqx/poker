@@ -1,4 +1,4 @@
-import groupBy from 'lodash.groupBy';
+import groupBy from 'lodash.groupby';
 import { isLooselyFlush } from './flush';
 import { isLooselyStraight } from './straight'
 

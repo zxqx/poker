@@ -1,4 +1,4 @@
-import groupBy from 'lodash.groupBy';
+import groupBy from 'lodash.groupby';
 
 export function isTwoPair(hand) {
   const groups = groupBy(hand, 'value');

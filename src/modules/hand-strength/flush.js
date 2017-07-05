@@ -1,4 +1,4 @@
-import groupBy from 'lodash.groupBy';
+import groupBy from 'lodash.groupby';
 import { isLooselyStraight } from './straight.js';
 
 export function isFlush(hand) {
