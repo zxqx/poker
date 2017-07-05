@@ -5,7 +5,9 @@ import {
   modifyPlayerStackSize,
   removePlayer,
   sitOutPlayer,
-  sitInPlayer
+  sitInPlayer,
+  addPlayerChips,
+  modifyPlayerSessionTotal
 } from '../../src/actions/table';
 
 describe('Table reducers', () => {
@@ -156,6 +158,38 @@ describe('Table reducers', () => {
         'sublime8316': {
           name: 'sublime8316',
           stackSize: 34,
+          seat: 2,
+          sitting: true
+        }
+      }
+    });
+  });
+
+
+  it('should handle modify player session total', () => {
+    const player = {
+      name: 'sublime8316',
+      amount: 50
+    };
+
+    expect(table({
+      players: {
+        'sublime8316': {
+          name: 'sublime8316',
+          sessionTotal: 0,
+          seat: 2,
+          sitting: true
+        }
+      }
+    },
+    {
+      type: modifyPlayerSessionTotal,
+      payload: player
+    })).toEqual({
+      players: {
+        'sublime8316': {
+          name: 'sublime8316',
+          sessionTotal: 50,
           seat: 2,
           sitting: true
         }

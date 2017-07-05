@@ -6,12 +6,14 @@ import {
   modifyPlayerStackSize,
   removePlayer,
   sitOutPlayer,
-  sitInPlayer
+  sitInPlayer,
+  modifyPlayerSessionTotal
 } from '../actions/table';
 
 const initialState = {
   players: {}
 };
+
 export default handleActions({
   [createTable]: (state, action) => ({
     ...state,
@@ -61,5 +63,16 @@ export default handleActions({
         sitting: true
       }
     }
-  })
+  }),
+  [modifyPlayerSessionTotal]: (state, action) => ({
+    ...state,
+    players: {
+      ...state.players,
+      [action.payload.name]: {
+        ...state.players[action.payload.name],
+        sessionTotal: state.players[action.payload.name].sessionTotal
+        + action.payload.amount
+      }
+    }
+  }),
 }, initialState);

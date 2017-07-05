@@ -1,10 +1,13 @@
+import { spy } from 'sinon';
 import {
   createTable,
   addPlayer,
   modifyPlayerStackSize,
   removePlayer,
   sitOutPlayer,
-  sitInPlayer
+  sitInPlayer,
+  addPlayerChips,
+  modifyPlayerSessionTotal
 } from '../../src/actions/table';
 
 describe('Table actions', () => {
@@ -72,5 +75,29 @@ describe('Table actions', () => {
       type: sitInPlayer.toString(),
       payload
     });
+  });
+
+  it('should create add player chips action', () => {
+    const payload = {
+      name: 'sublime8316',
+      amount: 50
+    };
+
+    const fn = addPlayerChips(payload);
+
+    expect(fn).toBeInstanceOf(Function);
+
+    const dispatch = spy();
+    fn(dispatch);
+
+    expect(dispatch.calledWith({
+      type: modifyPlayerStackSize.toString(),
+      payload
+    })).toEqual(true);
+
+    expect(dispatch.calledWith({
+      type: modifyPlayerSessionTotal.toString(),
+      payload
+    })).toEqual(true);
   });
 });
