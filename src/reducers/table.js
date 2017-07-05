@@ -1,10 +1,17 @@
 import { handleActions } from 'redux-actions';
-import { createTable, addPlayer } from '../actions/table';
+import pickBy from 'lodash.pickby';
+import {
+  createTable,
+  addPlayer,
+  modifyPlayerStackSize,
+  removePlayer,
+  sitOutPlayer,
+  sitInPlayer
+} from '../actions/table';
 
 const initialState = {
-  players: []
+  players: {}
 };
-
 export default handleActions({
   [createTable]: (state, action) => ({
     ...state,
@@ -12,9 +19,47 @@ export default handleActions({
   }),
   [addPlayer]: (state, action) => ({
     ...state,
-    players: [
+    players: {
       ...state.players,
-      action.payload
-    ]
+      [action.payload.name]: {
+        sitting: true,
+        ...action.payload
+      }
+    }
+  }),
+  [modifyPlayerStackSize]: (state, action) => ({
+    ...state,
+    players: {
+      ...state.players,
+      [action.payload.name]: {
+        ...state.players[action.payload.name],
+        stackSize: state.players[action.payload.name].stackSize
+        + action.payload.amount
+      }
+    }
+  }),
+  [removePlayer]: (state, action) => ({
+    ...state,
+    players: pickBy(state.players, player => player.name !== action.payload)
+  }),
+  [sitOutPlayer]: (state, action) => ({
+    ...state,
+    players: {
+      ...state.players,
+      [action.payload]: {
+        ...state.players[action.payload],
+        sitting: false
+      }
+    }
+  }),
+  [sitInPlayer]: (state, action) => ({
+    ...state,
+    players: {
+      ...state.players,
+      [action.payload]: {
+        ...state.players[action.payload],
+        sitting: true
+      }
+    }
   })
 }, initialState);
