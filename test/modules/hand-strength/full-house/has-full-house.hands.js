@@ -36,6 +36,44 @@ export const fullHouse1 = [
   }
 ];
 
+export const fullHouse2 = [
+  {
+    value: 13,
+    faceValue: 'K',
+    suit: 'spades'
+  },
+  {
+    value: 13,
+    faceValue: 'K',
+    suit: 'hearts'
+  },
+  {
+    value: 13,
+    faceValue: 'K',
+    suit: 'clubs'
+  },
+  {
+    value: 8,
+    faceValue: '3',
+    suit: 'diamonds'
+  },
+  {
+    value: 8,
+    faceValue: '8',
+    suit: 'spades'
+  },
+  {
+    value: 8,
+    faceValue: '8',
+    suit: 'clubs'
+  },
+  {
+    value: 2,
+    faceValue: '2',
+    suit: 'diamonds'
+  }
+];
+
 export const nonFullHouse1 = [
   {
     value: 3,
@@ -91,8 +129,8 @@ export const nonFullHouse2 = [
     suit: 'spades'
   },
   {
-    value: 5,
-    faceValue: '5',
+    value: 10,
+    faceValue: 'T',
     suit: 'diamonds'
   },
   {
