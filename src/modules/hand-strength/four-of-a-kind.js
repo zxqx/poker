@@ -25,18 +25,18 @@ export function hasFourOfAKind(hand) {
 
   const criteria = keys.some(key => groups[key].length === 4);
 
-  const value = keys
+  const values = keys
     .filter(key => groups[key].length === 4)
     .map(value => parseInt(value))
-    .sort((a,b) => b-a)
+    .sort((a, b) => b - a);
 
   const kickers = keys
     .filter(key => groups[key].length !== 4)
     .map(kicker => parseInt(kicker))
-    .sort((a,b) => b-a)
+    .sort((a, b) => b - a);
 
   return criteria && {
-    values: value,
+    values,
     kickers
   };
 }

@@ -74,6 +74,54 @@ export const fourOfAKind2 = [
   },
 ];
 
+export const fourOfAKind3 = [
+  {
+    value: 5,
+    faceValue: '5',
+    suit: 'clubs'
+  },
+  {
+    value: 5,
+    faceValue: '5',
+    suit: 'spades'
+  },
+  {
+    value: 5,
+    faceValue: '5',
+    suit: 'diamonds'
+  },
+  {
+    value: 4,
+    faceValue: '4',
+    suit: 'diamonds'
+  },
+  {
+    value: 5,
+    faceValue: '5',
+    suit: 'hearts'
+  },
+  {
+    value: 4,
+    faceValue: '4',
+    suit: 'clubs'
+  },
+  {
+    value: 4,
+    faceValue: '4',
+    suit: 'hearts'
+  },
+  {
+    value: 4,
+    faceValue: '4',
+    suit: 'spades'
+  },
+  {
+    value: 13,
+    faceValue: 'K',
+    suit: 'clubs'
+  }
+];
+
 export const nonFourOfAKind1 = [
   {
     value: 3,
