@@ -1,6 +1,4 @@
-
-//values: [5] kickers: [2,4,6]
-export const pairs1  = 
+export const pairs1  =
 [
   {
     value: 5,
@@ -28,9 +26,6 @@ export const pairs1  =
     suit: 'diamonds'
   }
 ];
-  
-
-//values: [8] kickers: [6,9,11]
 
 export const pairs2 = [
   {
@@ -59,9 +54,9 @@ export const pairs2 = [
     suit: 'spades'
   }
 ];
-  
 
-export const nonPairs1 = 
+
+export const nonPairs1 =
 [
   {
     value: 3,
@@ -141,7 +136,7 @@ export const nonPairs3 =
     value: 2,
     faceValue: '2',
     suit: 'hearts'
-  },    
+  },
   {
     value: 6,
     faceValue: '6',
@@ -172,12 +167,12 @@ export const nonPairs4 =
     value: 9,
     faceValue: '2',
     suit: 'diamonds'
-  },    
+  },
   {
     value: 6,
     faceValue: '6',
     suit: 'diamonds'
-  },    
+  },
 ];
 
 export const nonPairs5 =
@@ -201,7 +196,7 @@ export const nonPairs5 =
     value: 10,
     faceValue: 'T',
     suit: 'hearts'
-  },    
+  },
   {
     value: 6,
     faceValue: '6',
@@ -231,7 +226,7 @@ export const nonPairs6 =
     value: 10,
     faceValue: 'T',
     suit: 'hearts'
-  },    
+  },
   {
     value: 10,
     faceValue: '6',

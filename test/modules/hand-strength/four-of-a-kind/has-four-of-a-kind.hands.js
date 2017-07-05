@@ -1,7 +1,3 @@
-/*
-values: [10],
-kickers: [13,7,2]
-*/
 export const fourOfAKind1 = [
   {
     value: 10,
@@ -39,10 +35,7 @@ export const fourOfAKind1 = [
     suit: 'clubs'
   }
 ];
-/*
-values: [5],
-kickers: [4]
-*/
+
 export const fourOfAKind2 = [
   {
     value: 5,

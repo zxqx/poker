@@ -17,3 +17,27 @@ export function isTwoPair(hand) {
     kickers: [kicker]
   };
 }
+
+export function hasTwoPair(hand) {
+  const groups = groupBy(hand, 'value');
+  const keys = Object.keys(groups);
+
+  const value = keys
+    .filter(key => groups[key].length === 2)
+    .map(value => parseInt(value))
+    .sort((a,b) => b-a)
+
+  const kickers = keys
+    .filter(key => groups[key].length !== 2)
+    .map(kicker => parseInt(kicker))
+    .sort((a,b) => b-a)
+
+  const criteria = value.length == 2;
+
+  console.log(criteria, value)
+
+  return criteria &&  {
+    values: value,
+    kickers
+  };
+}
