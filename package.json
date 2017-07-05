@@ -12,6 +12,7 @@
     "coverage": "cat ./coverage/lcov.info | coveralls",
     "check": "npm run lint && npm test",
     "build": "npm run clean && cross-env NODE_ENV=production webpack src/index.js --config webpack.config.production.js",
+    "precommit": "npm run lint",
     "preversion": "npm run clean && npm run check",
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run build"
@@ -35,6 +36,7 @@
     "eslint-plugin-react": "^3.16.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
     "html-webpack-plugin": "^2.10.0",
+    "husky": "^0.14.2",
     "inline-style-prefixer": "^3.0.6",
     "jest": "^19.0.0",
     "jest-css-modules": "^1.1.0",
