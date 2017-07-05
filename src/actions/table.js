@@ -1,6 +1,7 @@
 import { createAction } from 'redux-actions';
 
 export const createTable = createAction('CREATE_TABLE');
+export const modifyTable = createAction('MODIFY_TABLE');
 export const addPlayer = createAction('ADD_PLAYER');
 export const modifyPlayerStackSize = createAction('MODIFY_PLAYER_STACK_SIZE');
 export const removePlayer = createAction('REMOVE_PLAYER');

@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
-import counter from './counter';
 import table from './table';
+import hand from './hand';
 
 const rootReducer = combineReducers({
-  counter,
   table,
+  hand,
   routing
 });
 
