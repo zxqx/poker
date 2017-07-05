@@ -9,6 +9,7 @@
     "lint": "eslint src test",
     "test": "cross-env NODE_ENV=test jest --config .jestrc --watchAll",
     "test:once": "cross-env NODE_ENV=test jest --config .jestrc",
+    "coverage": "cat ./coverage/lcov.info | coveralls",
     "check": "npm run lint && npm test",
     "build": "npm run clean && cross-env NODE_ENV=production webpack src/index.js --config webpack.config.production.js",
     "preversion": "npm run clean && npm run check",

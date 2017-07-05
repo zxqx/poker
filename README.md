@@ -1,6 +1,8 @@
 # poker
 
-Poker app
+A modern web app for playing hold 'em with your friends and enemies.
+
+[![Circle CI](https://circleci.com/gh/zakangelle/poker/tree/master.svg?style=shield)](https://circleci.com/gh/zakangelle/poker/tree/master) [![Coverage Status](https://img.shields.io/coveralls/zakangelle/poker.svg)](https://coveralls.io/github/zakangelle/poker?branch=master)
 
 ## Requirements
 

@@ -6,5 +6,10 @@
   ],
   "moduleNameMapper": {
     "^.+\\.(scss)$": "<rootDir>/node_modules/jest-css-modules"
-  }
+  },
+  "collectCoverage": true,
+  "coverageDirectory": "coverage",
+  "coverageReporters": [
+    "lcov"
+  ]
 }
