@@ -2,7 +2,7 @@ import { hasHighCard } from '../../../../src/modules/hand-strength/high-card';
 import {
   highCard1,
   nonHighCard1,
-  nonHighCard2,
+  nonHighCard2
 } from './has-high-card.hands.js';
 
 describe('high card', () => {

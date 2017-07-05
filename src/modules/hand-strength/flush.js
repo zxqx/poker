@@ -1,6 +1,24 @@
 import groupBy from 'lodash.groupby';
 import { isLooselyStraight } from './straight.js';
 
+export function isLooselyFlush(hand) {
+  const groups = groupBy(hand, 'suit');
+
+  return Object.keys(groups).length === 1;
+}
+
+function getValues(hand) {
+  const groups = groupBy(hand, 'suit');
+  const keys = Object.keys(groups);
+
+  const suit = keys.find(key => groups[key].length >= 5);
+
+  return groups[suit]
+    .map(card => card.value)
+    .sort((a, b) => b - a)
+    .slice(0, 5);
+}
+
 export function isFlush(hand) {
   const criteria = isLooselyFlush(hand) && !isLooselyStraight(hand);
 
@@ -25,22 +43,4 @@ export function hasFlush(hand) {
     values: getValues(hand),
     suit
   };
-}
-
-export function isLooselyFlush(hand) {
-  const groups = groupBy(hand, 'suit');
-
-  return Object.keys(groups).length === 1;
-}
-
-function getValues(hand) {
-  const groups = groupBy(hand, 'suit');
-  const keys = Object.keys(groups);
-
-  const suit = keys.find(key => groups[key].length >= 5);
-
-  return groups[suit]
-    .map(card => card.value)
-    .sort((a, b) => b - a)
-    .slice(0, 5);
 }

@@ -1,5 +1,4 @@
-export const pairs1  =
-[
+export const pairs1 = [
   {
     value: 5,
     faceValue: '5',
@@ -55,9 +54,7 @@ export const pairs2 = [
   }
 ];
 
-
-export const nonPairs1 =
-[
+export const nonPairs1 = [
   {
     value: 3,
     faceValue: '3',
@@ -85,8 +82,7 @@ export const nonPairs1 =
   }
 ];
 
-export const nonPairs2 =
-[
+export const nonPairs2 = [
   {
     value: 5,
     faceValue: '5',
@@ -114,9 +110,7 @@ export const nonPairs2 =
   }
 ];
 
-
-export const nonPairs3 =
-[
+export const nonPairs3 = [
   {
     value: 9,
     faceValue: '9',
@@ -141,13 +135,10 @@ export const nonPairs3 =
     value: 6,
     faceValue: '6',
     suit: 'diamonds'
-  },
-
+  }
 ];
 
-
-export const nonPairs4 =
-[
+export const nonPairs4 = [
   {
     value: 9,
     faceValue: '9',
@@ -172,11 +163,10 @@ export const nonPairs4 =
     value: 6,
     faceValue: '6',
     suit: 'diamonds'
-  },
+  }
 ];
 
-export const nonPairs5 =
-[
+export const nonPairs5 = [
   {
     value: 9,
     faceValue: '9',
@@ -201,12 +191,10 @@ export const nonPairs5 =
     value: 6,
     faceValue: '6',
     suit: 'diamonds'
-  },
+  }
 ];
 
-
-export const nonPairs6 =
-[
+export const nonPairs6 = [
   {
     value: 9,
     faceValue: '9',
@@ -231,5 +219,5 @@ export const nonPairs6 =
     value: 10,
     faceValue: '6',
     suit: 'clubs'
-  },
+  }
 ];

@@ -135,7 +135,7 @@ export const nonFlush3 = [
     value: 6,
     faceValue: '6',
     suit: 'diamonds'
-  },
+  }
 ];
 
 export const nonFlush4 = [

@@ -1,6 +1,4 @@
 import groupBy from 'lodash.groupby';
-import { hasPair } from './pair.js';
-import { hasThreeOfAKind } from './three-of-a-kind.js';
 
 export function isFullHouse(hand) {
   const groups = groupBy(hand, 'value');
@@ -13,7 +11,7 @@ export function isFullHouse(hand) {
 
   const values = keys
     .sort((a, b) => groups[b].length - groups[a].length)
-    .map(key => parseInt(key));
+    .map(key => parseInt(key, 10));
 
   return criteria && {
     values
@@ -26,16 +24,16 @@ export function hasFullHouse(hand) {
 
   const hasAThreeOfAKind = keys
     .filter(key => groups[key].length === 3)
-    .sort((a, b) => groups[b] - groups[a])
+    .sort((a, b) => groups[b] - groups[a]);
 
   const values = keys
-    .filter(key => groups[key].length == 3 || groups[key].length == 2)
+    .filter(key => groups[key].length === 3 || groups[key].length === 2)
     .sort((a, b) => b - a)
-    .map(key => parseInt(key))
+    .map(key => parseInt(key, 10));
 
-   const criteria = hasAThreeOfAKind.length >= 1 && values.length > 1;
+  const criteria = hasAThreeOfAKind.length >= 1 && values.length > 1;
 
   return criteria && {
-    values: values
+    values
   };
 }

@@ -1,6 +1,4 @@
-
-export const pairs1  =
-[
+export const pairs1 = [
   {
     value: 5,
     faceValue: '5',
@@ -167,9 +165,7 @@ export const pairs4 = [
   }
 ];
 
-
-export const nonPairs1 =
-[
+export const nonPairs1 = [
   {
     value: 3,
     faceValue: '3',

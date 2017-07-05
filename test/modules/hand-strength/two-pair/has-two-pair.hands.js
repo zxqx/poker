@@ -1,6 +1,4 @@
-
-export const twoPairs1  =
-[
+export const twoPairs1 = [
   {
     value: 5,
     faceValue: '5',
@@ -38,9 +36,7 @@ export const twoPairs1  =
   }
 ];
 
-
-export const nonTwoPairs1 =
-[
+export const nonTwoPairs1 = [
   {
     value: 3,
     faceValue: '3',
@@ -78,8 +74,7 @@ export const nonTwoPairs1 =
   }
 ];
 
-export const nonTwoPairs2 =
-[
+export const nonTwoPairs2 = [
   {
     value: 3,
     faceValue: '3',

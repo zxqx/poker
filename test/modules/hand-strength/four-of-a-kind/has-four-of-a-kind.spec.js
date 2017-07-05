@@ -10,7 +10,7 @@ describe('four of a kind', () => {
   it('should determine hand has four of a kind', () => {
     expect(hasFourOfAKind(fourOfAKind1)).toEqual({
       values: [10],
-      kickers: [13,7,2]
+      kickers: [13, 7, 2]
     });
 
     expect(hasFourOfAKind(fourOfAKind2)).toEqual({

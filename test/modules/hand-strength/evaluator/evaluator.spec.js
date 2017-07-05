@@ -1,4 +1,8 @@
-import { determineHandRanking, determineWinningHands } from '../../../../src/modules/hand-strength/evaluator.js';
+import {
+  determineHandRanking,
+  determineWinningHands
+} from '../../../../src/modules/hand-strength/evaluator.js';
+
 import {
   highCards,
   pairs,
@@ -8,8 +12,9 @@ import {
   flushes,
   fullHouses,
   fourOfAKinds,
-  straightFlushes,
+  straightFlushes
 } from './rankings.hands.js';
+
 import {
   straightVsThreeOfAKind,
   fullHouseVsFlush,

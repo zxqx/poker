@@ -71,7 +71,7 @@ export const fourOfAKind2 = [
     value: 4,
     faceValue: '4',
     suit: 'hearts'
-  },
+  }
 ];
 
 export const fourOfAKind3 = [
@@ -157,5 +157,5 @@ export const nonFourOfAKind1 = [
     value: 12,
     faceValue: 'Q',
     suit: 'hearts'
-  },
+  }
 ];

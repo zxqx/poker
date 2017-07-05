@@ -82,7 +82,6 @@ export const nonTwoPair1 = [
   }
 ];
 
-
 export const nonTwoPair2 = [
   {
     value: 5,
@@ -136,7 +135,7 @@ export const nonTwoPair3 = [
     value: 6,
     faceValue: '6',
     suit: 'diamonds'
-  },
+  }
 ];
 
 export const nonTwoPair4 = [
@@ -164,7 +163,7 @@ export const nonTwoPair4 = [
     value: 6,
     faceValue: '6',
     suit: 'diamonds'
-  },
+  }
 ];
 
 export const nonTwoPair5 = [

@@ -1,4 +1,3 @@
-import { spy } from 'sinon';
 import {
   createHand
 } from '../../src/actions/hand';

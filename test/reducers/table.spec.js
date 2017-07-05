@@ -7,7 +7,6 @@ import {
   removePlayer,
   sitOutPlayer,
   sitInPlayer,
-  addPlayerChips,
   modifyPlayerSessionTotal
 } from '../../src/actions/table';
 
@@ -47,8 +46,7 @@ describe('Table reducers', () => {
       maxPlayers: 6,
       maxBuyIn: 50,
       players: {}
-    },
-    {
+    }, {
       type: modifyTable,
       payload: config
     })).toEqual({
@@ -72,7 +70,7 @@ describe('Table reducers', () => {
       payload: player
     })).toEqual({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 34,
           seat: 2,
@@ -90,20 +88,19 @@ describe('Table reducers', () => {
 
     expect(table({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 34,
           seat: 2,
           sitting: true
         }
       }
-    },
-    {
+    }, {
       type: modifyPlayerStackSize,
       payload: player
     })).toEqual({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 50,
           seat: 2,
@@ -118,15 +115,14 @@ describe('Table reducers', () => {
 
     expect(table({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 34,
           seat: 2,
           sitting: true
         }
       }
-    },
-    {
+    }, {
       type: removePlayer,
       payload: player
     })).toEqual({
@@ -139,20 +135,19 @@ describe('Table reducers', () => {
 
     expect(table({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 34,
           seat: 2,
           sitting: true
         }
       }
-    },
-    {
+    }, {
       type: sitOutPlayer,
       payload: player
     })).toEqual({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 34,
           seat: 2,
@@ -167,20 +162,19 @@ describe('Table reducers', () => {
 
     expect(table({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 34,
           seat: 2,
           sitting: false
         }
       }
-    },
-    {
+    }, {
       type: sitInPlayer,
       payload: player
     })).toEqual({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           stackSize: 34,
           seat: 2,
@@ -199,20 +193,19 @@ describe('Table reducers', () => {
 
     expect(table({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           sessionTotal: 0,
           seat: 2,
           sitting: true
         }
       }
-    },
-    {
+    }, {
       type: modifyPlayerSessionTotal,
       payload: player
     })).toEqual({
       players: {
-        'sublime8316': {
+        sublime8316: {
           name: 'sublime8316',
           sessionTotal: 50,
           seat: 2,

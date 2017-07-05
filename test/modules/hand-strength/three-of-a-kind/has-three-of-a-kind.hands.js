@@ -1,4 +1,3 @@
-//values: [10] kickers: [13,5,7,2]
 export const threeOfAKind1 = [
   {
     value: 10,
@@ -34,10 +33,9 @@ export const threeOfAKind1 = [
     value: 2,
     faceValue: '2',
     suit: 'spades'
-  },
+  }
 ];
 
-//values: [5,4] kickers: [7]
 export const threeOfAKind2 = [
   {
     value: 5,
@@ -60,7 +58,7 @@ export const threeOfAKind2 = [
     suit: 'diamonds'
   },
   {
-    value: 4 ,
+    value: 4,
     faceValue: '4',
     suit: 'hearts'
   },
@@ -72,7 +70,7 @@ export const threeOfAKind2 = [
   {
     value: 7,
     faceValue: '7',
-    suit:'diamonds'
+    suit: 'diamonds'
   }
 ];
 

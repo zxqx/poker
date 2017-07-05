@@ -23,9 +23,7 @@ describe('Hand reducers', () => {
         'fold', 'call', 'raise'
       ]
     },
-    {
-      type: createHand
-    })).toEqual({
+    { type: createHand })).toEqual({
       actions: [],
       availableActions: []
     });

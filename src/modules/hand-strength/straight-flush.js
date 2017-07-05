@@ -1,8 +1,5 @@
-import groupBy from 'lodash.groupby';
-import { isLooselyFlush,
-         hasFlush } from './flush.js';
-import { isLooselyStraight,
-         hasStraight } from './straight.js';
+import { isLooselyFlush, hasFlush } from './flush.js';
+import { isLooselyStraight, hasStraight } from './straight.js';
 
 export function isStraightFlush(hand) {
   const criteria = isLooselyStraight(hand) && isLooselyFlush(hand);

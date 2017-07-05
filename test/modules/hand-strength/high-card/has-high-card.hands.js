@@ -33,12 +33,10 @@ export const highCard1 = [
     value: 10,
     faceValue: 'T',
     suit: 'diamonds'
-  },
+  }
 ];
 
-
-export const nonHighCard1 =
-[
+export const nonHighCard1 = [
   {
     value: 13,
     faceValue: 'K',

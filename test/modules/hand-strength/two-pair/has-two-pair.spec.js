@@ -8,7 +8,7 @@ import {
 describe('two pair', () => {
   it('should determine hand contains a two pair', () => {
     expect(hasTwoPair(twoPairs1)).toEqual({
-      values: [5,2],
+      values: [5, 2],
       kickers: [14, 6, 4]
     });
   });

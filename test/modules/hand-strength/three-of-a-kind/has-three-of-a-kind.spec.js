@@ -9,10 +9,10 @@ describe('three of a kind', () => {
   it('should determine hand has a three of a kind', () => {
     expect(hasThreeOfAKind(threeOfAKind1)).toEqual({
       values: [10],
-      kickers: [13,5,3,2]
+      kickers: [13, 5, 3, 2]
     });
     expect(hasThreeOfAKind(threeOfAKind2)).toEqual({
-      values: [5,4],
+      values: [5, 4],
       kickers: [7]
     });
   });
