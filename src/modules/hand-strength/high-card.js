@@ -16,3 +16,7 @@ export function isHighCard(hand) {
     values
   };
 }
+
+export function hasHighCard(hand) {
+  
+}
