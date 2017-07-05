@@ -1,6 +1,6 @@
 import groupBy from 'lodash.groupby';
-import { isLooselyFlush } from './flush';
-import { isLooselyStraight } from './straight'
+import { isLooselyFlush, hasFlush } from './flush';
+import { isLooselyStraight, hasStraight } from './straight'
 
 export function isHighCard(hand) {
   const groups = groupBy(hand, 'value');
@@ -18,5 +18,18 @@ export function isHighCard(hand) {
 }
 
 export function hasHighCard(hand) {
-  
+  const groups = groupBy(hand, 'value');
+  const keys = Object.keys(groups);
+
+  const criteria = keys.length === hand.length &&
+    !hasFlush(hand) && !hasStraight(hand);
+
+  const values = keys.map(key => parseInt(key))
+    .sort((a, b) => b - a);
+
+  console.log(values);
+
+  return criteria && {
+    values
+  };
 }
