@@ -27,8 +27,6 @@ export function hasHighCard(hand) {
   const values = keys.map(key => parseInt(key))
     .sort((a, b) => b - a);
 
-  console.log(values);
-
   return criteria && {
     values
   };
