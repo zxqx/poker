@@ -79,5 +79,5 @@ export default handleActions({
         + action.payload.amount
       }
     }
-  }),
+  })
 }, initialState);
