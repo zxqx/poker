@@ -1,48 +1,32 @@
-export const royalFlush1 =
-[
+export const royalFlush1 = [
   {
-    value: 2,
-    faceValue: '2',
-    suit: 'diamonds'
-  },
-  {
-    value:13,
+    value: 13,
     faceValue: 'K',
     suit: 'spades'
   },
   {
-    value:10,
+    value: 10,
     faceValue: '10',
     suit: 'spades'
   },
   {
-    value:14,
+    value: 14,
     faceValue: 'A',
     suit: 'spades'
   },
   {
-    value:11,
+    value: 11,
     faceValue: 'J',
     suit: 'spades'
   },
   {
-    value:12,
+    value: 12,
     faceValue: 'Q',
     suit: 'spades'
   },
-  {
-    value: 7,
-    faceValue: '7',
-    suit: 'clubs'
-  }
-]
+];
 
 export const nonRoyalFlush1 = [
-  {
-    value: 13,
-    faceValue: 'K',
-    suit: 'clubs'
-  },
   {
     value: 7,
     faceValue: '7',
@@ -68,11 +52,6 @@ export const nonRoyalFlush1 = [
     faceValue: 'T',
     suit: 'spades'
   },
-  {
-    value: 2,
-    faceValue: '2',
-    suit: 'spades'
-  }
 ];
 
 export const nonRoyalFlush2 = [
@@ -80,16 +59,6 @@ export const nonRoyalFlush2 = [
     value: 12,
     faceValue: 'Q',
     suit: 'clubs'
-  },
-  {
-    value: 7,
-    faceValue: '7',
-    suit: 'spades'
-  },
-  {
-    value: 8,
-    faceValue: '8',
-    suit: 'hearts'
   },
   {
     value: 13,
@@ -135,18 +104,8 @@ export const nonRoyalFlush3 = [
     suit: 'diamonds'
   },
   {
-    value: 9,
-    faceValue: '9',
-    suit: 'clubs'
-  },
-  {
     value: 14,
     faceValue: 'A',
     suit: 'diamonds'
   },
-  {
-    value: 2,
-    faceValue: '2',
-    suit: 'spades'
-  }
 ];

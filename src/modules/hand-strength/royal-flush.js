@@ -1,16 +1,27 @@
-import { hasStraightFlush } from './straight-flush.js';
-import { hasStraight } from './straight.js'
+import {
+  hasStraightFlush,
+  isStraightFlush
+} from './straight-flush.js';
 
 
-export function hasRoyalFlush(hand) {
+
+export function isRoyalFlush(hand) {
+  const results = isStraightFlush(hand);
+  const highCard = results.values;
+  const criteria =  results && highCard;
+  console.log(criteria)
+
+
+
+  return criteria && { values: highCard } ;
+}
+
+/*export function hasRoyalFlush(hand) {
   const straightFlush = hasStraightFlush(hand);
-  const values = straightFlush.values
-  const hasAceHigh = values == 14;
+  const value = straightFlush.values;
+  const hasAceHigh = value === 14;
   const criteria = straightFlush && hasAceHigh;
 
-  console.log(values)
-
-  return criteria && {
-    values: values
-  };
+  return criteria && { values: value };
 }
+*/
